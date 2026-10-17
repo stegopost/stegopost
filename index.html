@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>密文帖子插件 · 安装</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(1200px 600px at 20% -10%, #1d3b2a 0%, #0d1117 55%, #0a0c10 100%);
+    color: #e6edf3; font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    padding: 24px;
+  }
+  .card {
+    width: 100%; max-width: 620px; background: rgba(22,27,34,.86);
+    border: 1px solid rgba(240,246,252,.1); border-radius: 16px; padding: 32px 28px 28px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.5);
+  }
+  h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: .5px; }
+  .sub { color: #8b949e; margin: 0 0 26px; font-size: 15px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 18px;
+    color: #062b16; background: linear-gradient(180deg,#5ee08a,#3fb96b); border-radius: 12px;
+    padding: 16px; margin: 0 0 10px; box-shadow: 0 10px 24px rgba(63,185,107,.28);
+  }
+  .btn:active { transform: translateY(1px); }
+  .raw { text-align: center; font-size: 13px; color: #8b949e; margin: 0 0 26px; }
+  .raw code { color: #79c0ff; background: rgba(110,118,129,.16); padding: 2px 6px; border-radius: 5px; }
+  h2 { font-size: 16px; margin: 24px 0 10px; color: #d0d7de; }
+  ol, ul { margin: 0; padding-left: 22px; }
+  li { margin: 5px 0; color: #c9d1d9; }
+  .note { margin-top: 22px; padding: 14px 16px; border-radius: 10px; font-size: 14px;
+          background: rgba(210,153,34,.1); border: 1px solid rgba(210,153,34,.32); color: #e3b341; }
+  .foot { margin-top: 22px; font-size: 12px; color: #6e7681; text-align: center; }
+  a.inline { color: #79c0ff; }
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>密文帖子插件</h1>
+  <p class="sub">在论坛正常聊图片，真正的意思藏在图片里。只有填了同样两个密码的人能看懂。</p>
+
+  <a class="btn" href="StegoPost.user.js">点这里安装脚本</a>
+  <p class="raw">手机浏览器若无法直接点开，请手动访问：<br><code>StegoPost.user.js</code></p>
+
+  <h2>装之前</h2>
+  <ol>
+    <li>浏览器先装 <b>Tampermonkey（油猴）</b>。电脑用 Chrome / Edge / Firefox；安卓用<b>狐猴浏览器</b>、<b>Firefox 安卓版</b>或 <b>Kiwi</b> 加 Tampermonkey。</li>
+    <li>点上面的按钮。油猴会自动认出这是脚本，弹出安装页，点<b>安装</b>。</li>
+    <li>打开妖火网，右下角会出现一个圆形「密」字按钮，就是装好了。</li>
+  </ol>
+
+  <h2>第一次用</h2>
+  <ul>
+    <li>点「密」字圆点 → 填<b>密码</b>和<b>第二密码</b> → 点「开门」。</li>
+    <li>两个密码要和群里完全一致，差一个字就互相看不懂。</li>
+  </ul>
+
+  <h2>换新版（不用先删旧的）</h2>
+  <ul>
+    <li>直接点上面那个按钮，油猴会问「是否替换已装的脚本」，点<b>替换 / 更新</b>就行。<b>不用先卸载</b>，密码和设置都留着。</li>
+    <li>插件自己也会查新版：每次打开妖火，它会悄悄看一眼有没有更新。有的话右下角「密」按钮会弹一条提示，点「密」→ 最下面「检查更新」→ 一键换上。</li>
+  </ul>
+
+  <div class="note">
+    装完的脚本就是一个 <code>.user.js</code> 文件。油猴认的是这个后缀，所以请用上面这个地址安装，
+    不要把网址里的文件名改掉。
+  </div>
+
+  <div class="note">
+    这个地址打不开时，用备线：<br>
+    <a class="inline" href="https://stegopost-x7k2m.surge.sh/StegoPost.user.js">https://stegopost-x7k2m.surge.sh/StegoPost.user.js</a>
+  </div>
+
+  <p class="foot">脚本地址：<a class="inline" href="StegoPost.user.js">StegoPost.user.js</a></p>
+</main>
+</body>
+</html>
