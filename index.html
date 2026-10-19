@@ -43,7 +43,15 @@
   <p class="sub">在论坛正常聊图片，真正的意思藏在图片里。只有填了同样两个密码的人能看懂。</p>
 
   <a class="btn" href="StegoPost.user.js">点这里安装脚本</a>
-  <p class="raw">手机浏览器若无法直接点开，请手动访问：<br><code>StegoPost.user.js</code></p>
+  <p class="raw">手机浏览器若无法直接点开，把这条地址复制到地址栏：<br><code id="absurl">StegoPost.user.js</code></p>
+  <script>
+    (function () {
+      try {
+        var el = document.getElementById("absurl");
+        el.textContent = location.href.replace(/[^/]*([?#].*)?$/, "") + "StegoPost.user.js";
+      } catch (e) {}
+    })();
+  </script>
 
   <h2>装之前</h2>
   <ol>
@@ -70,8 +78,9 @@
   </div>
 
   <div class="note">
-    这个地址打不开时，用备线：<br>
-    <a class="inline" href="https://stegopost-x7k2m.surge.sh/StegoPost.user.js">https://stegopost-x7k2m.surge.sh/StegoPost.user.js</a>
+    这个地址打不开时，用备线（内容一样，装完都是 7.6.1）：<br>
+    <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.6.1/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.6.1/StegoPost.user.js</a><br>
+    <a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js</a>
   </div>
 
   <p class="foot">脚本地址：<a class="inline" href="StegoPost.user.js">StegoPost.user.js</a></p>
