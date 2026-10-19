@@ -42,13 +42,22 @@
   <h1>密文帖子插件</h1>
   <p class="sub">在论坛正常聊图片，真正的意思藏在图片里。只有填了同样两个密码的人能看懂。</p>
 
-  <a class="btn" href="StegoPost.user.js">点这里安装脚本</a>
-  <p class="raw">手机浏览器若无法直接点开，把这条地址复制到地址栏：<br><code id="absurl">StegoPost.user.js</code></p>
+  <a class="btn" id="mainbtn" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js">点这里安装脚本</a>
+  <p class="raw">手机浏览器若无法直接点开，把这条地址复制到地址栏：<br><code id="absurl">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js</code></p>
   <script>
+    /**
+     * 【v7.7 修：安装按钮不再用相对路径】
+     *   以前是 href="StegoPost.user.js"，等于「你从这个页面所在的域名下载」。
+     *   这页被镜像过好几份（surge / GitHub Pages / 各种反代），其中 surge 那份停在 7.6.0：
+     *   于是"点安装"装到的是旧版，用户看到的就是「更新地址打不开 / 装了还是老的」。
+     *   现在按钮与可复制地址都指 **ghfast 反代 raw@main** —— 稳定指针、国内能连、raw 侧无 CDN 缓存。
+     */
+    var INSTALL = "https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js";
     (function () {
       try {
-        var el = document.getElementById("absurl");
-        el.textContent = location.href.replace(/[^/]*([?#].*)?$/, "") + "StegoPost.user.js";
+        var b = document.getElementById("mainbtn");
+        if (b) b.href = INSTALL;
+        document.getElementById("absurl").textContent = INSTALL;
       } catch (e) {}
     })();
   </script>
@@ -78,12 +87,13 @@
   </div>
 
   <div class="note">
-    这个地址打不开时，用备线（内容一样，装完都是 7.6.1）：<br>
-    <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.6.1/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.6.1/StegoPost.user.js</a><br>
-    <a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js</a>
+    这个地址打不开时，用备线（内容一样，装完都是 7.7.0）：<br>
+    <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@latest/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@latest/StegoPost.user.js</a><br>
+    <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.7.0/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.7.0/StegoPost.user.js</a><br>
+    <a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/r53/StegoPost.user.js">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/r53/StegoPost.user.js</a>
   </div>
 
-  <p class="foot">脚本地址：<a class="inline" href="StegoPost.user.js">StegoPost.user.js</a></p>
+  <p class="foot">脚本地址：<a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js">main/StegoPost.user.js</a></p>
 </main>
 </body>
 </html>
