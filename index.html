@@ -40,7 +40,7 @@
 <body>
 <main class="card">
   <h1>密文帖子插件</h1>
-  <p class="sub">在论坛正常聊图片，真正的意思藏在图片里。只有填了同样两个密码的人能看懂。</p>
+  <p class="sub">在论坛正常聊图片，真正的意思藏在图片里。只有粘了同一串圈子密钥的人能看懂。</p>
 
   <a class="btn" id="mainbtn" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js">点这里安装脚本</a>
   <p class="raw">手机浏览器若无法直接点开，把这条地址复制到地址栏：<br><code id="absurl">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js</code></p>
@@ -71,13 +71,15 @@
 
   <h2>第一次用</h2>
   <ul>
-    <li>点「密」字圆点 → 填<b>密码</b>和<b>第二密码</b> → 点「开门」。</li>
-    <li>两个密码要和群里完全一致，差一个字就互相看不懂。</li>
+    <li>点「密」字圆点 → 把<b>圈子密钥</b>粘进框里 → 点「开门」。</li>
+    <li>这串东西怎么来的，圈子里置顶那条会告诉你。它不是几个字，是一条比较长的串，复制完整。</li>
+    <li>连字符、空格、换行、大小写都不用管，直接粘，插件自己会认。差一个字符就互相看不懂。</li>
+    <li>开门之后这串会存在本机，下次打开妖火不用再填。换设备、清了浏览器数据才需要重新粘。</li>
   </ul>
 
   <h2>换新版（不用先删旧的）</h2>
   <ul>
-    <li>直接点上面那个按钮，油猴会问「是否替换已装的脚本」，点<b>替换 / 更新</b>就行。<b>不用先卸载</b>，密码和设置都留着。</li>
+    <li>直接点上面那个按钮，油猴会问「是否替换已装的脚本」，点<b>替换 / 更新</b>就行。<b>不用先卸载</b>，密钥串和设置都留着，老帖也照样读得出来。</li>
     <li>插件自己也会查新版：每次打开妖火，它会悄悄看一眼有没有更新。有的话右下角「密」按钮会弹一条提示，点「密」→ 最下面「检查更新」→ 一键换上。</li>
   </ul>
 
@@ -87,10 +89,10 @@
   </div>
 
   <div class="note">
-    这个地址打不开时，用备线（内容一样，装完都是 7.7.2）：<br>
+    这个地址打不开时，用备线（内容一样，装完都是 7.7.14）：<br>
     <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@latest/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@latest/StegoPost.user.js</a><br>
-    <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.7.6/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.7.6/StegoPost.user.js</a><br>
-    <a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/r55/StegoPost.user.js">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/r55/StegoPost.user.js</a>
+    <a class="inline" href="https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.7.14/StegoPost.user.js">https://cdn.jsdelivr.net/gh/stegopost/stegopost@v7.7.14/StegoPost.user.js</a><br>
+    <a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/r66/StegoPost.user.js">https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/r66/StegoPost.user.js</a>
   </div>
 
   <p class="foot">脚本地址：<a class="inline" href="https://ghfast.top/https://raw.githubusercontent.com/stegopost/stegopost/main/StegoPost.user.js">main/StegoPost.user.js</a></p>
